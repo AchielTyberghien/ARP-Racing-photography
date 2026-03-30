@@ -4,3 +4,4 @@
 [submodule "ARP-backend"]
 	path = ARP-backend
 	url = https://github.com/AchielTyberghien/ARP-racing-backend.git
+	branch = main
