@@ -14,7 +14,7 @@ This repository contains everything needed to run the ARP Racing platform:
 ## How it works
 
 1. A visitor opens `https://arpracing.duckdns.org`.
-2. Nginx serves the built Angular app from `ARP-frontend/dist`.
+2. Nginx serves the built Angular app from `ARP-frontend/dist/arpweb_ng_v19/browser` (mounted via `/usr/share/nginx/html` in the container).
 3. Frontend API calls go to `/api/*`.
 4. Nginx proxies `/api/*` to the backend container on port `3000`.
 5. Backend reads media metadata from ImageKit and returns JSON to the frontend.
@@ -79,7 +79,7 @@ Never commit real secrets.
 
 ### 3) Build frontend assets
 
-The Nginx container serves static files from `ARP-frontend/dist`, so build frontend first:
+The compose volume maps `ARP-frontend/dist` to `/usr/share/nginx/html`, and Nginx root is `/usr/share/nginx/html/arpweb_ng_v19/browser`. Build frontend first so this exact path exists:
 
 ```bash
 cd ARP-frontend
