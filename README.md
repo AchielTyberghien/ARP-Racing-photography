@@ -46,7 +46,7 @@ This repository contains everything needed to run the ARP Racing platform:
 
 ```bash
 git clone --recurse-submodules <repo-url>
-cd ARP-Racing-portfolio
+cd ARP-Racing-photography
 ```
 
 If already cloned:
